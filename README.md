@@ -16,6 +16,9 @@ A visually stunning, modern Rock Paper Scissors game build with Vanilla JavaScri
 
 ## 🚀 Quick Start
 
+### 🌐 Live Demo
+Play the game instantly here: **[https://alfredang.github.io/scissor-paper-stone-game/](https://alfredang.github.io/scissor-paper-stone-game/)**
+
 ### Running Locally
 Simply open `index.html` in any modern web browser.
 
