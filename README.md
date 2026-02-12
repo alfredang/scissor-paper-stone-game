@@ -2,6 +2,8 @@
 
 A visually stunning, modern Rock Paper Scissors game build with Vanilla JavaScript, CSS Grid, and Neon/Glassmorphism design. Play against a machine in an environment with fluid animations and synth sound effects.
 
+### 🎮 [Play the Live Demo](https://alfredang.github.io/scissor-paper-stone-game/)
+
 ![Neon Arena Screenshot](./screenshot.png)
 
 ## ✨ Features
