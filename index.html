@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Rock Paper Scissors — Neon Arena</title>
+  <meta name="description"
+    content="A visually stunning Rock Paper Scissors game with neon aesthetics, animations, and Best-of-5 mode." />
+  <meta name="theme-color" content="#0a0a1a" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@400;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- Confetti overlay canvas -->
+  <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+  <main class="game-wrapper">
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="game-header">
+      <h1 class="game-title">Rock Paper Scissors</h1>
+      <p class="game-subtitle">Choose your weapon. Defeat the machine.</p>
+    </header>
+
+    <!-- ==================== MODE SELECTOR ==================== -->
+    <nav class="mode-selector" id="mode-selector" aria-label="Game mode">
+      <button class="mode-btn active" data-mode="free" id="mode-free">Free Play</button>
+      <button class="mode-btn" data-mode="bo5" id="mode-bo5">Best of 5</button>
+    </nav>
+
+    <!-- ==================== SCOREBOARD ==================== -->
+    <section class="scoreboard" id="scoreboard" aria-label="Score">
+      <div class="score-block">
+        <span class="score-label">You</span>
+        <span class="score-value player-score" id="player-score" aria-live="polite">0</span>
+      </div>
+      <span class="score-divider" aria-hidden="true">:</span>
+      <div class="score-block">
+        <span class="score-label">CPU</span>
+        <span class="score-value computer-score" id="computer-score" aria-live="polite">0</span>
+      </div>
+    </section>
+
+    <!-- ==================== ROUND DOTS (Bo5) ==================== -->
+    <div class="round-dots" id="round-dots" role="status" aria-label="Round progress" style="display:none;"></div>
+
+    <!-- ==================== ARENA ==================== -->
+    <section class="arena" id="arena" aria-label="Battle arena">
+      <div class="arena-slot">
+        <div class="arena-icon" id="player-icon" aria-label="Your choice">❔</div>
+        <span class="arena-label">You</span>
+      </div>
+      <span class="vs-badge" aria-hidden="true">VS</span>
+      <div class="arena-slot">
+        <div class="arena-icon" id="computer-icon" aria-label="Computer choice">❔</div>
+        <span class="arena-label">CPU</span>
+      </div>
+    </section>
+
+    <!-- ==================== RESULT TEXT ==================== -->
+    <output class="result-text" id="result-text" aria-live="assertive">Pick your move!</output>
+
+    <!-- ==================== CHOICE BUTTONS ==================== -->
+    <section class="choices" id="choices" aria-label="Choose your move">
+      <button class="choice-btn" data-choice="rock" id="btn-rock" aria-label="Rock">
+        <span class="icon" aria-hidden="true">🪨</span>
+        <span class="label">Rock</span>
+      </button>
+      <button class="choice-btn" data-choice="paper" id="btn-paper" aria-label="Paper">
+        <span class="icon" aria-hidden="true">📄</span>
+        <span class="label">Paper</span>
+      </button>
+      <button class="choice-btn" data-choice="scissors" id="btn-scissors" aria-label="Scissors">
+        <span class="icon" aria-hidden="true">✂️</span>
+        <span class="label">Scissors</span>
+      </button>
+    </section>
+
+    <!-- ==================== ACTIONS ==================== -->
+    <div class="actions">
+      <button class="reset-btn" id="reset-btn">Reset Game</button>
+    </div>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+      <p>Neon Arena &bull; 2026</p>
+    </footer>
+
+  </main>
+
+  <!-- Game script (deferred to run after DOM is ready) -->
+  <script src="game.js" defer></script>
+</body>
+
+</html>
