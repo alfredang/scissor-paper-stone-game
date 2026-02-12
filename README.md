@@ -28,10 +28,10 @@ You can run the game instantly using Docker:
 
 ```bash
 # Pull the image from Docker Hub
-docker pull alfredang/scissor-paper-stone-game:latest
+docker pull tertiaryinfotech/scissor-paper-stone-game:latest
 
 # Run the container
-docker run -p 8080:80 alfredang/scissor-paper-stone-game:latest
+docker run -p 8080:80 tertiaryinfotech/scissor-paper-stone-game:latest
 ```
 Then visit `http://localhost:8080` in your browser.
 
@@ -47,7 +47,7 @@ Then visit `http://localhost:8080` in your browser.
 If you want to build the image yourself:
 
 ```bash
-docker build -t alfredang/scissor-paper-stone-game .
+docker build -t tertiaryinfotech/scissor-paper-stone-game .
 ```
 
 ---
